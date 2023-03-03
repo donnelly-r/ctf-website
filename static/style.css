@@ -2,6 +2,8 @@
 Style provided by https://github.com/pure-css/pure/tree/master/site/static/layouts/side-menu
 */
 
+.code { font-family: 'Courier New', Courier, monospace }
+
 input[type=text], select {
     width: 100%;
     padding: 12px 20px;
