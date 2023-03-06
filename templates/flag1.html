@@ -99,9 +99,12 @@
                 <h2 class="content-subhead">Check answer:</h2>
                 <p> (the flag should be
                     entered in the format 'flag{xxxx}' where x is a unique combination of characters)</p>
-                <input type="text" id="flagInput" name="flagInput"><br><br>
+                <form name="submitAnswer">
+                    <input type="text" id="flagInput" name="flagInput">
+                </form>
+                <br><br>
                 <button name="checkAnswerButton" class="action_btn" type="button" onclick="checkAnswer()">Check answer</button>
-                <h2><a href="flag2" class="pure-menu-item">Next flag</a></h2>
+                <h2><a href="flag2" id="nextFlag" style="display:none;" class="pure-menu-item">Continue to flag 2</a></h2>
             </div>
         </div>
     </div>

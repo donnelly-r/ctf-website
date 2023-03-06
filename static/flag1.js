@@ -6,7 +6,8 @@ var hintBtn1 = document.getElementById("hint1button");
 var hintBtn2 = document.getElementById("hint2button");
 var hintBtn3 = document.getElementById("hint3button");
 
-//var userAnswer = document.getElementById("flagInput");
+let userAnswer = document.getElementById("flagInput");
+var nextFlagLink = document.getElementById("nextFlag");
 
 hintBtn2.disabled = true;
 hintBtn3.disabled = true;
@@ -23,8 +24,9 @@ function showHint3() {
     hintMessage3.style.display = "block";
 }
 
-// function checkAnswer(){
-//     if(userAnswer.toLowerCase() == 'nkw2' || userAnswer.toLowerCase() == 'flag{nkw2}'){
-
-//     }
-// }
+function checkAnswer() {
+    if (document.forms['submitAnswer'].flagInput.value == "nkw2" || document.forms['submitAnswer'].textbox_text.value == "flag{nkw2}") {
+        nextFlagLink.style.display = "block";
+        alert("Congratulations, you have completed the first flag! Please click the hyperlink at the bottom of this page to continue to the next challenge")
+    }
+}
