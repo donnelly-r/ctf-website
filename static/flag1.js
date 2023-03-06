@@ -6,7 +6,6 @@ var hintBtn1 = document.getElementById("hint1button");
 var hintBtn2 = document.getElementById("hint2button");
 var hintBtn3 = document.getElementById("hint3button");
 
-let userAnswer = document.getElementById("flagInput");
 var nextFlagLink = document.getElementById("nextFlag");
 
 hintBtn2.disabled = true;
