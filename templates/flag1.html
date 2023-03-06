@@ -47,42 +47,65 @@
                 <h2 class="content-subhead">Instructions:</h2>
                 <p>
                     You are able to interact with the linux command line through the use of, you guessed it, commands.
-                    The first command you'll be introduced to is '<span class="code">ls</span>', which is shorthand for 'list directory contents'. This
+                    The first command you'll be introduced to is '<span class="code">ls</span>', which is shorthand for
+                    'list directory contents'. This
                     essentially outputs all the contents of any given folder on the machine.<br><br>
-                    Another such command is '<span class="code">cd</span>', shorthand for 'change directory'. In the context of linux, folders are
-                    are referred to as directories, but essentially act as folders would on a Windows machine. <br><br> Your
-                    challenge for this particular flag is to use the '<span class="code">cd</span>' command to change directories to the '<span class="code">Documents/flag1</span>'
-                    directory. The format this command expects is as follows: '<span class="code">cd &#60path&#62</span>' where the path is the directory you wish
-                    to navigate to. From there, you must use the '<span class="code">ls</span>' command to list the contents of the flag1 directory. Doing
+                    Another such command is '<span class="code">cd</span>', shorthand for 'change directory'. In the
+                    context of linux, folders are
+                    referred to as directories, but essentially act as folders would on a Windows machine. <br><br>
+                    Your
+                    challenge for this particular flag is to use the '<span class="code">cd</span>' command to change
+                    directories to the '<span class="code">Documents/flag1</span>'
+                    directory. The format this command expects is as follows: '<span class="code">cd
+                        &#60path&#62</span>' where the path is the directory you wish
+                    to navigate to. From there, you must use the '<span class="code">ls</span>' command to list the
+                    contents of the flag1 directory. Doing
                     so will retrieve the flag and you'll be able to move on to the next challenge!
                     <br><br>
-                    If you get stuck or lost at any point, use the following command to reset back to the 'root' direcotry of the
-                    system: <p style="font-family: 'Courier New', Courier, monospace;">cd ~</p> If you wish to 'go up' a directory level, 
-                    use the command: <p style="font-family: 'Courier New', Courier, monospace;">cd ..</p>
+                    If you get stuck or lost at any point, use the following command to reset back to the 'root' (top
+                    level) direcotry of the
+                    system:
+                <p style="font-family: 'Courier New', Courier, monospace;">cd ~</p> If you wish to 'go up' a directory
+                level,
+                use the command: <p style="font-family: 'Courier New', Courier, monospace;">cd ..</p>
                 </p>
                 <h2 class="content-subhead">Context & Further Reading:</h2>
                 <p>
                     Here are some resources which may help you understand the 'ls' and 'cd' commands in Linux:<br>
-                    <ul>
-                    <li><a href="https://www.geeksforgeeks.org/cd-command-in-linux-with-examples/" class="pure-menu-item">cd-command-in-linux-with-examples</a></li>
-                    <li><a href="https://www.geeksforgeeks.org/practical-applications-ls-command-linux/" class="pure-menu-item">practical-applications-ls-command-linux</a></li>
-                    </ul>
+                <ul>
+                    <li><a href="https://www.geeksforgeeks.org/cd-command-in-linux-with-examples/"
+                            class="pure-menu-item">cd-command-in-linux-with-examples</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/practical-applications-ls-command-linux/"
+                            class="pure-menu-item">practical-applications-ls-command-linux</a></li>
+                </ul>
                 </p>
-                
+
                 <h2 class="content-subhead">Hints:</h2>
+                <p id="hint1text" style="display:none;">Use '<span class="code">cd</span>' to change directory to '<span
+                        class="code">cd ~/Documents/Flag1</span>'.</p>
+                <p id="hint2text" style="display:none;">Now use '<span class="code">ls</span>' to list the contents of
+                    the
+                    Flag1 directory.</p>
+                <p id="hint3text" style="display:none;">Try this command: '<span class="code">cd
+                        ~/Documents/Flag1</span>'.
+                    Then type '<span class="code">ls</span>'. The flag should be displayed on screen, type this into the
+                    check answer box to contiue!</p>
                 <div class="hint-buttons">
-                    <button name="hint1" class="action_btn" type="button" onclick="showHint1()">Hint 1</button> 
-                    <button name="hint2" class="action_btn" type="button" onclick="showHint2()">Hint 2</button> 
-                    <button name="hint3" class="action_btn" type="button" onclick="showHint3()">Hint 3</button> 
+                    <button name="hint1button" id="hint1button" class="action_btn" type="button" onclick="showHint1()">Hint 1</button>
+                    <button name="hint2button" disabled id="hint2button" class="action_btn" type="button" onclick="showHint2()">Hint 2</button>
+                    <button name="hint3button" disabled id="hint3button" class="action_btn" type="button" onclick="showHint3()">Hint 3</button>
                 </div>
 
                 <h2 class="content-subhead">Check answer:</h2>
-                <input type="text" id="fname" name="fname"><br><br>
+                <p> (the flag should be
+                    entered in the format 'flag{xxxx}' where x is a unique combination of characters)</p>
+                <input type="text" id="flagInput" name="flagInput"><br><br>
+                <button name="checkAnswerButton" class="action_btn" type="button" onclick="checkAnswer()">Check answer</button>
                 <h2><a href="flag2" class="pure-menu-item">Next flag</a></h2>
             </div>
         </div>
     </div>
-    
+
     <script type="text/javascript" src="{{ url_for('static', filename='flag1.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='ui.js') }}"></script>
 
