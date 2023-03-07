@@ -46,25 +46,25 @@
             <div class="content">
                 <h2 class="content-subhead">Introduction</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    Welcome to the homepage of the CTF helper website. The purpose of this site is to aid you to
+                    complete 10 flags which will expand your knowledge of various cyber security topic areas, including
+                    Linux commands, Cryptography and hacking basics (like SQL injection attacks)!
                 </p>
+                
                 <h2 class="content-subhead">Getting started</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    To start the challenges please open the Ubuntu virtual machine by clicking on the Oracle VM Virtual
+                    Box window. You should be presented with a terminal session which looks like the following:.
                 </p>
-                <h2><a href="flag2" class="pure-menu-item">Continue to the first flag...</a></h2>
+                <img src="{{url_for('static', filename='assets/photo.jpg')}}" width="400px" class="center">
+                <p>
+                    Once you see this screen, you are ready to start the first flag! Click the link below to navigate there.
+                </p>
+                <h2><a href="flag1" class="pure-menu-item">Continue to the first flag...</a></h2>
             </div>
         </div>
     </div>
-    
+
     <script type="text/javascript" src="{{ url_for('static', filename='ui.js') }}"></script>
 
 </body>
