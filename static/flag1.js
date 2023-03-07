@@ -22,15 +22,18 @@ function showHint(hintNumber) {
         hintMessage2.style.display = "block";
         hintBtn3.disabled = false;
     }
-    else { 
+    else {
         //display hint 3 text
         hintMessage3.style.display = "block";
     }
 }
 
 function checkAnswer() {
-    if (document.forms['submitAnswer'].flagInput.value == "nkw2" || document.forms['submitAnswer'].textbox_text.value == "flag{nkw2}") {
+    if (document.forms['submitAnswer'].flagInput.value == "nkw2" || document.forms['submitAnswer'].flagInput.value == "flag{nkw2}") {
         nextFlagLink.style.display = "block";
         alert("Congratulations, you have completed the first flag! Please click the hyperlink at the bottom of this page to continue to the next challenge")
+    }
+    else {
+        alert("Unfortunately this is not correct. Please ensure you have entered the flag in the correct form and try again")
     }
 }
