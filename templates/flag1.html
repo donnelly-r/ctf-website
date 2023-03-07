@@ -63,7 +63,7 @@
                     so will retrieve the flag and you'll be able to move on to the next challenge!
                     <br><br>
                     If you get stuck or lost at any point, use the following command to reset back to the 'root' (top
-                    level) direcotry of the
+                    level) directory of the
                     system:
                 <p style="font-family: 'Courier New', Courier, monospace;">cd ~</p> If you wish to 'go up' a directory
                 level,
@@ -89,16 +89,16 @@
                 <p id="hint3text" style="display:none;">Try this command: '<span class="code">cd
                         ~/Documents/Flag1</span>'.
                     Then type '<span class="code">ls</span>'. The flag should be displayed on screen, type this into the
-                    check answer box to contiue!</p>
+                    check answer box to continue!</p>
                 <div class="hint-buttons">
-                    <button name="hint1button" id="hint1button" class="action_btn" type="button" onclick="showHint1()">Hint 1</button>
-                    <button name="hint2button" disabled id="hint2button" class="action_btn" type="button" onclick="showHint2()">Hint 2</button>
-                    <button name="hint3button" disabled id="hint3button" class="action_btn" type="button" onclick="showHint3()">Hint 3</button>
+                    <button name="hint1button" id="hint1button" class="action_btn" type="button" onclick="showHint(1)">Hint 1</button>
+                    <button name="hint2button" disabled id="hint2button" class="action_btn" type="button" onclick="showHint(2)">Hint 2</button>
+                    <button name="hint3button" disabled id="hint3button" class="action_btn" type="button" onclick="showHint(3)">Hint 3</button>
                 </div>
 
                 <h2 class="content-subhead">Check answer:</h2>
                 <p> (the flag should be
-                    entered in the format 'flag{xxxx}' where x is a unique combination of characters)</p>
+                    entered in the format 'flag{xxxx}' or 'xxxx' where x is a unique combination of characters)</p>
                 <form name="submitAnswer">
                     <input type="text" id="flagInput" name="flagInput">
                 </form>
