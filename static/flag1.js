@@ -11,16 +11,21 @@ var nextFlagLink = document.getElementById("nextFlag");
 hintBtn2.disabled = true;
 hintBtn3.disabled = true;
 
-function showHint1() {
-    hintMessage1.style.display = "block";
-    hintBtn2.disabled = false;
-}
-function showHint2() {
-    hintMessage2.style.display = "block";
-    hintBtn3.disabled = false;
-}
-function showHint3() {
-    hintMessage3.style.display = "block";
+function showHint(hintNumber) {
+    if (hintNumber == 1) {
+        //display hint 1 text, make hint 2 button clickable
+        hintMessage1.style.display = "block";
+        hintBtn2.disabled = false;
+    }
+    else if (hintNumber == 2) {
+        //display hint 2 text, make hint 3 button clickable
+        hintMessage2.style.display = "block";
+        hintBtn3.disabled = false;
+    }
+    else { 
+        //display hint 3 text
+        hintMessage3.style.display = "block";
+    }
 }
 
 function checkAnswer() {
