@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CTF Homepage</title>
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="static/style/style.css">
 </head>
 
 <body>
@@ -50,22 +50,39 @@
                     complete 10 flags which will expand your knowledge of various cyber security topic areas, including
                     Linux commands, Cryptography and hacking basics (like SQL injection attacks)!
                 </p>
-                
+
                 <h2 class="content-subhead">Getting started</h2>
                 <p>
                     To start the challenges please open the Ubuntu virtual machine by clicking on the Oracle VM Virtual
                     Box window. You should be presented with a terminal session which looks like the following:.
                 </p>
-                <img src="{{url_for('static', filename='assets/index/expected_terminal_output.jpg')}}" width="400px" class="center">
+                <img src="{{url_for('static', filename='assets/index/expected_terminal_output.jpg')}}" width="400px"
+                    class="center">
                 <p>
-                    Once you see this screen, you are ready to start the first flag! Click the link below to navigate there.
+                    Once you see this screen, you are ready to start the first flag! Click the link below to navigate
+                    there.
                 </p>
+
+                <h2 class="content-subhead">Outline of the 10 flags</h2>
+                <ul>
+                    <li>Flag 1. Introducing commands: Can you change directories from root to '~/Documents/Flag1'.</li>
+                    <li>Flag 2. Introducing command line arguments: Can you use ls -al to list a hidden file?</li>
+                    <li>Flag 3. Introducing commands: Can you use '| grep' to filter information?</li>
+                    <li>Flag 4. Introducing commands: Can you change permissions of file and cat the contents?</li>
+                    <li>Flag 5. Introducing commands: Can you unzip zip file?</li>
+                    <li>Flag 6. Cryptography: Can you solve a Caesar cypher?</li>
+                    <li>Flag 7. Cryptography: Can you reverse the hash of an encrypted file using Cyberchef?</li>
+                    <li>Flag 8. Stenography: Can you find the information hiding technique used and uncover the flag?</li>
+                    <li>Flag 9. SQL Injection: Can you perform an SQL injection attack?</li>
+                    <li>Flag 10. Reverse engineering: Can you Inspect a python file to find a flag.</li>
+                </ul><br>
+
                 <h2><a href="flag1" class="pure-menu-item">Continue to the first flag...</a></h2>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript" src="{{ url_for('static', filename='ui.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/ui.js') }}"></script>
 
 </body>
 
