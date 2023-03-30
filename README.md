@@ -5,6 +5,9 @@ This is a helper website which is intended to be used in conjunction with a Ubun
 
 This website has been created as part of an undergraduate computer science dissertation.
 
+## Getting started:
+Clone this repository, navigate to the the root directory of the project and run 'python ./website.py'. 'pip install flask' may need to be run first if you do not have Flask installed.
+
 ## Flag Outline:
 * **Flag 1.** Introducing commands: Can you change directories from root to '~/Documents/Flag1'.
 * **Flag 2.** Introducing command line arguments: Can you use ls -al to list a hidden file?

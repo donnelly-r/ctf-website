@@ -9,6 +9,10 @@ def home():
 @views.route("/flag1")
 def flag1():
     return render_template("flag1.html")
+    
+@views.route("/TEMPLATE")
+def template():
+    return render_template("template.html")
 
 @views.route("/")
 def reroute():

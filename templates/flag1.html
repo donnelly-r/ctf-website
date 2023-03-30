@@ -103,13 +103,13 @@
                     <input type="text" id="flagInput" name="flagInput">
                 </form>
                 <br><br>
-                <button name="checkAnswerButton" class="action_btn" type="button" onclick="checkAnswer()">Check answer</button>
+                <button name="checkAnswerButton" class="action_btn" type="button" onclick="checkAnswer(1)">Check answer</button>
                 <h2><a href="flag2" id="nextFlag" style="display:none;" class="pure-menu-item">Continue to flag 2</a></h2>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript" src="{{ url_for('static', filename='scripts/flag1.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/flag.js') }}"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='scripts/ui.js') }}"></script>
 
 </body>
