@@ -46,5 +46,13 @@ function checkAnswer(flagNumber) {
             else {
                 alert("Unfortunately this is not correct. Please ensure you have entered the flag in the correct form and try again")
             }
+        case 3:
+            if (document.forms['submitAnswer'].flagInput.value == "72bS" || document.forms['submitAnswer'].flagInput.value == "flag{72bS}") {
+                nextFlagLink.style.display = "block";
+                alert("Congratulations, you have completed the first flag! Please click the hyperlink at the bottom of this page to continue to the next challenge")
+            }
+            else {
+                alert("Unfortunately this is not correct. Please ensure you have entered the flag in the correct form and try again")
+            }        
     }
 }
