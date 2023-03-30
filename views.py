@@ -10,6 +10,10 @@ def home():
 def flag1():
     return render_template("flag1.html")
     
+@views.route("/flag2")
+def flag2():
+    return render_template("flag2.html")
+        
 @views.route("/TEMPLATE")
 def template():
     return render_template("template.html")

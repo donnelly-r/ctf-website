@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag 1</title>
+    <link rel="stylesheet" href="static/style/style.css">
+</head>
+
+<body>
+
+    <div id="layout">
+        <!-- Menu toggle -->
+        <a href="#menu" id="menuLink" class="menu-link">
+            <!-- Hamburger icon -->
+            <span></span>
+        </a>
+
+        <div id="menu">
+            <div class="pure-menu">
+                <a class="pure-menu-heading">Capture the Flag</a>
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a href="/" class="pure-menu-link">Home</a></li>
+                    <li class="pure-menu-item"><a href="flag1" class="pure-menu-link">Flag 1</a></li>
+                    <li class="pure-menu-item"><a href="flag2" class="pure-menu-link">Flag 2</a></li>
+                    <li class="pure-menu-item"><a href="flag3" class="pure-menu-link">Flag 3</a></li>
+                    <li class="pure-menu-item"><a href="flag4" class="pure-menu-link">Flag 4</a></li>
+                    <li class="pure-menu-item"><a href="flag5" class="pure-menu-link">Flag 5</a></li>
+                    <li class="pure-menu-item"><a href="flag6" class="pure-menu-link">Flag 6</a></li>
+                    <li class="pure-menu-item"><a href="flag7" class="pure-menu-link">Flag 7</a></li>
+                    <li class="pure-menu-item"><a href="flag8" class="pure-menu-link">Flag 8</a></li>
+                    <li class="pure-menu-item"><a href="flag9" class="pure-menu-link">Flag 9</a></li>
+                    <li class="pure-menu-item"><a href="flag10" class="pure-menu-link">Flag 10</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="header">
+                <h1>Flag 2</h1>
+                <h2>Can you use list a hidden file?</h2>
+            </div>
+
+            <div class="content">
+                <h2 class="content-subhead">Instructions:</h2>
+                <p>
+                    To begin this challenge please navigate to the correct directory by running '<span class="code">cd
+                        ../flag2</span>'
+                    <br><br>        
+                    Now you must use an optional identifier known as a flag to modify the output of ls command to show
+                    hidden files. This is accessed by typing '<span class="code">ls -[your_flag_here]</span>' where the text
+                    '[your_flag_here]' should be replaced with a single character. Find the correct character to complete the challnege!
+                
+                    <h2 class="content-subhead">Help! I'm lost!</h2>
+                If you get stuck or lost at any point, use the following command to reset back to the 'root' (top
+                level) directory of the
+                system:
+                <p style="font-family: 'Courier New', Courier, monospace;">cd ~</p>
+                Then run:
+                <p style="font-family: 'Courier New', Courier, monospace;">cd Documents/flag2</p>
+                to get to the correct directory.
+                <h2 class="content-subhead">Context & Further Reading:</h2>
+                <p>
+                    Here are some links to help you understand flags, as well as links to the optional flags that the ls command can use:
+                <ul>
+                    <li><a href="https://docs.lug.oregonstate.edu/Linux/basic-commands/" class="pure-menu-item" target="_blank" rel="noopener noreferrer">What are flags and how are they used?</a></li>
+                    <li><a href="https://www.rapidtables.com/code/linux/ls.html" class="pure-menu-item" target="_blank" rel="noopener noreferrer">All flags the ls command can use</a></li>
+                </ul>
+                </p>
+
+                <h2 class="content-subhead">Hints:</h2>
+                <p id="hint1text" style="display:none;">
+                    Ensure you are in the correct directory. Double check you are in the correct path by running '<span class="code">pwd</span>'. It should say '/home/user/Documents/flag2'.
+                <p id="hint2text" style="display:none;">
+                    Run the command '<span class="code">ls -l</span>'. See how this output differs from running just '<span class="code">ls</span>'. Try to change the '<span class="code">l</span>'' to another character to find the flag.
+                <p id="hint3text" style="display:none;">
+                    Run the command '<span class="code">ls -a</span>'. You should see the flag as a file beginning with the '.' character. This denotes a hidden file.
+                <div class="hint-buttons">
+                    <button name="hint1button" id="hint1button" class="action_btn" type="button"
+                        onclick="showHint(1)">Hint 1</button>
+                    <button name="hint2button" disabled id="hint2button" class="action_btn" type="button"
+                        onclick="showHint(2)">Hint 2</button>
+                    <button name="hint3button" disabled id="hint3button" class="action_btn" type="button"
+                        onclick="showHint(3)">Hint 3</button>
+                </div>
+
+                <h2 class="content-subhead">Check answer:</h2>
+                <p> (the flag should be
+                    entered in the format 'flag{xxxx}' or 'xxxx' where x is a unique combination of characters)</p>
+                <form name="submitAnswer">
+                    <input type="text" id="flagInput" name="flagInput">
+                </form>
+                <br><br>
+                <button name="checkAnswerButton" class="action_btn" type="button"
+                    onclick="checkAnswer(2)">Check answer</button>
+                <h2><a href="flag3" id="nextFlag" style="display:none;" class="pure-menu-item">Continue to
+                        flag 3</a></h2>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/flag.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/ui.js') }}"></script>
+
+</body>
+
+</html>
