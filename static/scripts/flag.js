@@ -29,30 +29,45 @@ function showHint(hintNumber) {
 }
 
 function checkAnswer(flagNumber) {
-    switch (flagNumber){
+    var answer = document.forms['submitAnswer'].flagInput.value
+    switch (flagNumber) {
         case 1:
-            if (document.forms['submitAnswer'].flagInput.value == "nkw2" || document.forms['submitAnswer'].flagInput.value == "flag{nkw2}") {
-                nextFlagLink.style.display = "block";
-                alert("Congratulations, you have completed the first flag! Please click the hyperlink at the bottom of this page to continue to the next challenge")
+            if (answer == "nkw2" || answer == "flag{nkw2}") {
+                correctAnswer();
             }
             else {
-                alert("Unfortunately this is not correct. Please ensure you have entered the flag in the correct form and try again")
+                incorrectAnswer();
             }
         case 2:
-            if (document.forms['submitAnswer'].flagInput.value == "24da" || document.forms['submitAnswer'].flagInput.value == "flag{24da}") {
-                nextFlagLink.style.display = "block";
-                alert("Congratulations, you have completed the first flag! Please click the hyperlink at the bottom of this page to continue to the next challenge")
+            if (answer == "24da" || answer == "flag{24da}") {
+                correctAnswer();
             }
             else {
-                alert("Unfortunately this is not correct. Please ensure you have entered the flag in the correct form and try again")
+                incorrectAnswer();
             }
         case 3:
-            if (document.forms['submitAnswer'].flagInput.value == "72bS" || document.forms['submitAnswer'].flagInput.value == "flag{72bS}") {
-                nextFlagLink.style.display = "block";
-                alert("Congratulations, you have completed the first flag! Please click the hyperlink at the bottom of this page to continue to the next challenge")
+            if (answer == "72bS" || answer == "flag{72bS}") {
+                correctAnswer();
             }
             else {
-                alert("Unfortunately this is not correct. Please ensure you have entered the flag in the correct form and try again")
-            }        
+                incorrectAnswer();
+            }
+        case 4:
+            if (answer == "pght" || answer == "flag{pght}") {
+                correctAnswer();
+            }
+            else {
+                incorrectAnswer();
+            }
     }
 }
+
+function correctAnswer() {
+    nextFlagLink.style.display = "block";
+    alert("Congratulations, you have completed the first flag! Please click the hyperlink at the bottom of this page to continue to the next challenge")
+}
+
+function incorrectAnswer() {
+    alert("Unfortunately this is not correct. Please ensure you have entered the flag in the correct form and try again")
+}
+
