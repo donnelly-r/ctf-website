@@ -1,6 +1,7 @@
 var hintMessage1 = document.getElementById("hint1text");
 var hintMessage2 = document.getElementById("hint2text");
 var hintMessage3 = document.getElementById("hint3text");
+var hintList3 = document.getElementById("hint3list");
 
 var hintBtn1 = document.getElementById("hint1button");
 var hintBtn2 = document.getElementById("hint2button");
@@ -11,7 +12,7 @@ var nextFlagLink = document.getElementById("nextFlag");
 hintBtn2.disabled = true;
 hintBtn3.disabled = true;
 
-function showHint(hintNumber) {
+function showHint(hintNumber, containsList) {
     if (hintNumber == 1) {
         //display hint 1 text, make hint 2 button clickable
         hintMessage1.style.display = "block";
@@ -25,11 +26,16 @@ function showHint(hintNumber) {
     else {
         //display hint 3 text
         hintMessage3.style.display = "block";
+        if (containsList == true) {
+            hintList3.style.display = "block";
+        }
+        
     }
 }
 
 function checkAnswer(flagNumber) {
     var answer = document.forms['submitAnswer'].flagInput.value
+    //answer = answer.toLowerCase();
     switch (flagNumber) {
         case 1:
             if (answer == "nkw2" || answer == "flag{nkw2}") {
@@ -54,6 +60,13 @@ function checkAnswer(flagNumber) {
             }
         case 4:
             if (answer == "pght" || answer == "flag{pght}") {
+                correctAnswer();
+            }
+            else {
+                incorrectAnswer();
+            }
+        case 5:
+            if (answer == "p1an" || answer == "flag{p1an}") {
                 correctAnswer();
             }
             else {
