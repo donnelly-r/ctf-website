@@ -25,6 +25,10 @@ def flag4():
 @views.route("/flag5")
 def flag5():
     return render_template("flag5.html")    
+    
+@views.route("/flag6")
+def flag6():
+    return render_template("flag6.html")    
         
 @views.route("/TEMPLATE")
 def template():

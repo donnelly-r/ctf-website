@@ -34,8 +34,7 @@ function showHint(hintNumber, containsList) {
 }
 
 function checkAnswer(flagNumber) {
-    var answer = document.forms['submitAnswer'].flagInput.value
-    //answer = answer.toLowerCase();
+    var answer = document.forms['submitAnswer'].flagInput.value;
     switch (flagNumber) {
         case 1:
             if (answer == "nkw2" || answer == "flag{nkw2}") {
@@ -72,12 +71,19 @@ function checkAnswer(flagNumber) {
             else {
                 incorrectAnswer();
             }
+        case 6:
+            if (answer == "p9Cq" || answer == "flag{p9Cq}") {
+                correctAnswer();
+            }
+            else {
+                incorrectAnswer();
+            } 
     }
 }
 
 function correctAnswer() {
     nextFlagLink.style.display = "block";
-    alert("Congratulations, you have completed the first flag! Please click the hyperlink at the bottom of this page to continue to the next challenge")
+    alert("Congratulations, you have completed this flag! Please click the hyperlink at the bottom of this page to continue to the next challenge")
 }
 
 function incorrectAnswer() {
