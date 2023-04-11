@@ -97,11 +97,9 @@ function checkAnswer(flagNumber) {
 function correctAnswer() {
     nextFlagLink.style.display = "block";
     alert("Congratulations, you have completed this flag! Please click the hyperlink at the bottom of this page to continue to the next challenge")
-    //throw new Error("Something went badly wrong!");
 }
 
 function incorrectAnswer() {
     alert("Unfortunately this is not correct. Please ensure you have entered the flag in the correct form and try again")
-    //throw new Error("Something went badly wrong!");
 }
 
