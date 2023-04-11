@@ -35,48 +35,61 @@ function showHint(hintNumber, containsList) {
 
 function checkAnswer(flagNumber) {
     var answer = document.forms['submitAnswer'].flagInput.value;
+    answer = answer.toLowerCase();
     switch (flagNumber) {
         case 1:
             if (answer == "nkw2" || answer == "flag{nkw2}") {
-                correctAnswer();
+                correctAnswer();   
+                return; 
             }
             else {
                 incorrectAnswer();
+                return;
             }
         case 2:
             if (answer == "24da" || answer == "flag{24da}") {
                 correctAnswer();
+                return;
             }
             else {
                 incorrectAnswer();
+                return;
             }
         case 3:
-            if (answer == "72bS" || answer == "flag{72bS}") {
+            if (answer == "72bs" || answer == "flag{72bs}") {
                 correctAnswer();
+                return;
             }
             else {
                 incorrectAnswer();
+                return;
             }
         case 4:
             if (answer == "pght" || answer == "flag{pght}") {
                 correctAnswer();
+                return;
             }
             else {
                 incorrectAnswer();
+                return;
             }
         case 5:
             if (answer == "p1an" || answer == "flag{p1an}") {
                 correctAnswer();
+                return;
             }
             else {
                 incorrectAnswer();
+                return;
             }
         case 6:
-            if (answer == "p9Cq" || answer == "flag{p9Cq}") {
+            if (answer == "p9cq" || answer == "flag{p9cq}") {
                 correctAnswer();
+                return;
             }
             else {
                 incorrectAnswer();
+                return;
             } 
     }
 }
@@ -84,9 +97,11 @@ function checkAnswer(flagNumber) {
 function correctAnswer() {
     nextFlagLink.style.display = "block";
     alert("Congratulations, you have completed this flag! Please click the hyperlink at the bottom of this page to continue to the next challenge")
+    //throw new Error("Something went badly wrong!");
 }
 
 function incorrectAnswer() {
     alert("Unfortunately this is not correct. Please ensure you have entered the flag in the correct form and try again")
+    //throw new Error("Something went badly wrong!");
 }
 
