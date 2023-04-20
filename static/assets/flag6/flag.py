@@ -1,5 +1,3 @@
-# this code is intended to be run as part of flag6 of the CTF challenge. It should be present under the directory ~/Documents/flag6 under the name flag.py. The goal of this challenge is to find the correct credentials to output the flag.
-
 import rsa
 
 publicKey, privateKey = rsa.newkeys(512)
@@ -32,10 +30,13 @@ def main():
     password = input("Please enter your password: \n")
 
     # Define message
+    password_array_ascii = [112, 97, 115, 115, 119, 111, 114, 100, 49, 50, 51, 13, 10]
     message_ascii_array = [102, 108, 97, 103, 123, 112, 57, 67, 113, 125]
-    message_ascii_string = convert_ascii_array_to_string_array(
-        message_ascii_array)
+    message_ascii_string = convert_ascii_array_to_string_array(message_ascii_array)
+    password_ascii_string = convert_ascii_array_to_string_array(password_array_ascii)
+    password_ascii_list = convert_string_to_list(password_ascii_string)
     flag_message = ""
+    desired_password = ""
 
     # encrypt message
     encrypted_message = rsa.encrypt(message_ascii_string.encode(), publicKey)
@@ -50,10 +51,13 @@ def main():
     for i in decrypted_message:
         flag_message = flag_message + convert_int_to_ascii(int(i))
 
+    for i in password_ascii_list:
+        desired_password = desired_password + convert_int_to_ascii(int(i))
+
     print("__________________________________")
     print("")
-    if username.lower() == "admin" and password.lower() == "mypasswordisverysecure":
-        print("Hello, admin! Here is your flag  :)! \n")
+    if username.lower() == "admin" and password.lower().strip() == desired_password.strip():
+        print("Hello, admin! Here is your flag :)! \n")
         print("Flag: " + flag_message)
     else:
         print("Error! Invalid credentials, the flag is still encrypted! \n")
