@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flag 3</title>
+    <title>Flag 8</title>
     <link rel="stylesheet" href="static/style/style.css">
 </head>
 
@@ -37,47 +37,34 @@
 
         <div id="main">
             <div class="header">
-                <h1>Flag 3</h1>
-                <h2>Can you use the grep command to search a file?</h2>
+                <h1>Flag 8</h1>
+                <h2>Sitemapping</h2>
             </div>
 
             <div class="content">
                 <h2 class="content-subhead">Instructions:</h2>
                 <p>
-                    To begin this challenge please navigate to the correct directory by running '<span class="code">cd
-                        ../flag3</span>'
-                    <br><br>
-                    the cat command is used to output the contents of a file. run '<span class="code">cat
-                        poem.txt</span>' to see how this works
-                    There is a hidden flag within this poem, try to use the grep command to search for the flag!
-
-
-                <h2 class="content-subhead">Help! I'm lost!</h2>
-                If you get stuck or lost at any point, use the following command to navigate to the correct directory.
-                <p style="font-family: 'Courier New', Courier, monospace;">cd ~/Documents/flag3</p>
-
+                    Many websites use a sitemap.html document to help search engines index all of their webpages (and
+                    also to help users like you to navigate). This
+                    websites sitemap can be found at the address: <a href="http://127.0.0.1:5000/challenges/sitemap"
+                        target="_blank">http://127.0.0.1:5000/challenges/sitemap</a>. Sometimes developers are forgetful
+                    and might leave deprecated versions of webpages on these sitemaps.
                 <h2 class="content-subhead">Context & Further Reading:</h2>
                 <p>
-                    Here are some links to help you understand the grep command
+                    Here is a link to understand what a sitemap is and why it is needed.
                 <ul>
-                    <li><a href="https://swcarpentry.github.io/shell-novice/07-find/index.html" class="pure-menu-item"
-                            target="_blank" rel="noopener noreferrer">How to use the grep command</a></li>
-                    <li><a href="https://stackoverflow.com/questions/4712521/filtering-linux-command-output"
-                            class="pure-menu-item" target="_blank" rel="noopener noreferrer">Related stackoverflow
-                            post</a></li>
+                    <li><a href="https://developers.google.com/search/docs/crawling-indexing/sitemaps/overview" class="pure-menu-item" target="_blank" rel="noopener noreferrer">Learn about sitemaps</a></li>
                 </ul>
                 </p>
 
                 <h2 class="content-subhead">Hints:</h2>
                 <p>Note: The next hint button is only accessible after waiting 5 seconds</p>
                 <p id="hint1text" style="display:none;">
-                    Enter this command '<span class="code">cat poem.txt | grep Lizzie</span>', see how it only displays
-                    the lines containing the phrase "Lizzie"
+                    See if you can find any deprecated websites on the sitemap.
                 <p id="hint2text" style="display:none;">
-                    Try changing the word Lizzie to something that might output the flag
+                    HTML headers can be accessed by using inspect element (pressing f12)
                 <p id="hint3text" style="display:none;">
-                    Try replace the word 'Lizzie' to 'flag', like so: '<span class="code">cat poem.txt | grep
-                        flag</span>'
+                    Use the search bar to navigate to the flag image file. Your search term should look something like "http://127.0.0.1:5000/static/assets/search_term/image_file.png"
                 <div class="hint-buttons">
                     <button name="hint1button" id="hint1button" class="action_btn" type="button"
                         onclick="showHint(1)">Hint 1</button>
@@ -88,16 +75,14 @@
                 </div>
 
                 <h2 class="content-subhead">Check answer:</h2>
-                <p> (the flag should be entered in the format 'flag{xxxx}' or 'xxxx' where x is a unique combination of
-                    characters)</p>
+                <p> (the flag should be
+                    entered in the format 'flag{xxxx}' or 'xxxx' where x is a unique combination of characters)</p>
                 <form name="submitAnswer">
                     <input type="text" id="flagInput" name="flagInput">
                 </form>
                 <br><br>
                 <button name="checkAnswerButton" class="action_btn" type="button"
-                    onclick="checkAnswer(3)">Check answer</button>
-                <h2><a href="flag4" id="nextFlag" style="display:none;" class="pure-menu-item">Continue to
-                        flag 4<a></h2>
+                    onclick="checkAnswer(8)">Check answer</button>
             </div>
         </div>
     </div>

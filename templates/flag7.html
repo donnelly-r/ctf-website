@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flag 1</title>
+    <title>Flag 7</title>
     <link rel="stylesheet" href="static/style/style.css">
 </head>
 
@@ -37,48 +37,23 @@
 
         <div id="main">
             <div class="header">
-                <h1>Flag 1</h1>
-                <h2>Are you able to use the change directory linux command?</h2>
+                <h1>Flag 7</h1>
+                <h2>Would you like any source with that?</h2>
             </div>
 
             <div class="content">
                 <h2 class="content-subhead">Instructions:</h2>
                 <p>
-                    Your challenge for this particular flag is to use the '<span class="code">cd</span>' command to change
-                    directories to the '<span class="code">Documents/flag1</span>'
-                    directory. From there, you must use the '<span class="code">ls</span>' command to list the
-                    contents of the flag1 directory. Doing
-                    so will retrieve the flag and you'll be able to move on to the next challenge!
-                    <h2 class="content-subhead">Help! I'm lost!</h2>
-                    If you get stuck or lost at any point, use the following command to reset back to the 'root' (top
-                    level) directory of the
-                    system:
-                <p style="font-family: 'Courier New', Courier, monospace;">cd ~</p> If you wish to 'go up' a directory
-                level,
-                use the command: <p style="font-family: 'Courier New', Courier, monospace;">cd ..</p>
-                </p>
-                <h2 class="content-subhead">Context & Further Reading:</h2>
-                <p>
-                    Here are some resources which may help you understand the 'ls' and 'cd' commands in Linux:<br>
-                <ul>
-                    <li><a href="https://www.geeksforgeeks.org/cd-command-in-linux-with-examples/"
-                            class="pure-menu-item" target="_blank" rel="noopener noreferrer">Geeks for geeks - cd command with examples</a></li>
-                    <li><a href="https://www.geeksforgeeks.org/practical-applications-ls-command-linux/"
-                            class="pure-menu-item" target="_blank" rel="noopener noreferrer">Geeks for geeks - ls command with examples</a></li>
-                </ul>
-                </p>
+                    Navigate to <a href="http://127.0.0.1:5000/challenges/flag7_challenge" target="_blank">http://127.0.0.1:5000/challenges/flag7_challenge</a>. See if you can find the flag hidden on that webpage!
 
                 <h2 class="content-subhead">Hints:</h2>
                 <p>Note: The next hint button is only accessible after waiting 5 seconds</p>
-                <p id="hint1text" style="display:none;">Use '<span class="code">cd</span>' to change directory to '<span
-                        class="code">cd ~/Documents/flag1</span>'.</p>
-                <p id="hint2text" style="display:none;">Now use '<span class="code">ls</span>' to list the contents of
-                    the
-                    flag1 directory.</p>
-                <p id="hint3text" style="display:none;">Try this command: '<span class="code">cd
-                        ~/Documents/flag1</span>'.
-                    Then type '<span class="code">ls</span>'. The flag should be displayed on screen, type this into the
-                    check answer box to continue!</p>
+                <p id="hint1text" style="display:none;">
+                    Checking the source code is usually a good way to reverse engineer a website!
+                <p id="hint2text" style="display:none;">
+                    Have you used inspect element before? Try inspecting the webpage to look at its source code.
+                <p id="hint3text" style="display:none;">
+                    Navigate to <a href="http://127.0.0.1:5000/challenges/flag7_challenge" target="_blank">http://127.0.0.1:5000/challenges/flag7_challenge</a>. Press f12 (or right click and click inspect), see if you can find a way to make the "Show Flag" button clickable (try editing the button attributes!).
                 <div class="hint-buttons">
                     <button name="hint1button" id="hint1button" class="action_btn" type="button" onclick="showHint(1)">Hint 1</button>
                     <button name="hint2button" disabled id="hint2button" class="action_btn" type="button" onclick="showHint(2)">Hint 2</button>
@@ -92,8 +67,8 @@
                     <input type="text" id="flagInput" name="flagInput">
                 </form>
                 <br><br>
-                <button name="checkAnswerButton" class="action_btn" type="button" onclick="checkAnswer(1)">Check answer</button>
-                <h2><a href="flag2" id="nextFlag" style="display:none;" class="pure-menu-item">Continue to flag 2</a></h2>
+                <button name="checkAnswerButton" class="action_btn" type="button" onclick="checkAnswer(7)">Check answer</button>
+                <h2><a href="flag8" id="nextFlag" style="display:none;" class="pure-menu-item">Continue to flag 8</a></h2>
             </div>
         </div>
     </div>

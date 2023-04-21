@@ -12,15 +12,17 @@ var nextFlagLink = document.getElementById("nextFlag");
 hintBtn2.disabled = true;
 hintBtn3.disabled = true;
 
-function showHint(hintNumber, containsList) {
+async function showHint(hintNumber, containsList) {
     if (hintNumber == 1) {
         //display hint 1 text, make hint 2 button clickable
         hintMessage1.style.display = "block";
+        await sleep(5000);
         hintBtn2.disabled = false;
     }
     else if (hintNumber == 2) {
         //display hint 2 text, make hint 3 button clickable
         hintMessage2.style.display = "block";
+        await sleep(5000);
         hintBtn3.disabled = false;
     }
     else {
@@ -31,6 +33,10 @@ function showHint(hintNumber, containsList) {
         }
         
     }
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 function checkAnswer(flagNumber) {
@@ -91,6 +97,24 @@ function checkAnswer(flagNumber) {
                 incorrectAnswer();
                 return;
             } 
+        case 7:
+            if (answer == "zdhe" || answer == "flag{zdhe}") {
+                correctAnswer();
+                return;
+            }
+            else {
+                incorrectAnswer();
+                return;
+            }  
+        case 8:
+            if (answer == "mksp" || answer == "flag{mksp}") {
+                window.location.href = "http://127.0.0.1:5000/finish";
+                return;
+            }
+            else {
+                incorrectAnswer();
+                return;
+            }  
     }
 }
 
@@ -102,4 +126,3 @@ function correctAnswer() {
 function incorrectAnswer() {
     alert("Unfortunately this is not correct. Please ensure you have entered the flag in the correct form and try again")
 }
-
