@@ -32,16 +32,19 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-.code { font-family: 'Courier New', Courier, monospace }
+.code {
+    font-family: 'Courier New', Courier, monospace
+}
 
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-  }
+}
 
-input[type=text], select {
+input[type=text],
+select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -49,17 +52,26 @@ input[type=text], select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-  }
+}
 
 .buttons {
     width: 200px;
     margin: 0 auto;
-    display: inline;}
-    
-        .action_btn {
+    display: inline;
+}
+
+.action_btn {
     width: 200px;
     margin: 0 auto;
-    display: inline;}
+    display: inline;
+}
+
+.submit_btn {
+    width: 200px;
+    margin: 0 auto;
+    display: inline;
+    background-color: lightgreen;
+}
 
 body {
     color: #777;
@@ -324,4 +336,3 @@ Hides the menu at `48em`, but modify this based on your app's needs.
         left: 150px;
     }
 }
-
