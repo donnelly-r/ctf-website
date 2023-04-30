@@ -58,6 +58,10 @@ def finish():
 def template():
     return render_template("template.html")
 
+@views.route("/test")
+def test():
+    return render_template("test.html")
+
 @views.route("/")
 def reroute():
     return redirect(url_for("views.home"))
